@@ -9,6 +9,7 @@ HARAP DIBACA!
 - Untuk masuk ke halaman admin, cukup ketik pada browser localhost/(nama folder tempat menyimpan/login)
 
 username admin : coba
+
 password admin : coba
 
 Terima kasih!
