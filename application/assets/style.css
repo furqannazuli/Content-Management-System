@@ -1,0 +1,110 @@
+.header-text{
+    color: blue;
+    font-size: 3em;
+}
+
+.logo-position{
+    height: 75px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo-position-2{
+    height: 55px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+.no-radius{
+    border-radius: 0;
+}
+
+.no-cursor{
+    cursor: unset !important;
+}
+
+.custom-badge-size{
+    min-width: 300px;
+}
+
+
+.custom-col {
+    margin: 4px;
+    flex: 0 1 calc(20% - 8px);
+}
+
+.day-color{
+    width: 100%;
+    height: 100%;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.no-margin-except-right{
+    margin-right: 4px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.day-height{
+    height: 40px;
+}
+
+.day-general-style{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+
+.right-border{
+    height: 120%;
+    background: black;
+    width: 4px;
+    position: absolute;
+    right: -10px;
+    top: -4px;
+}
+
+.background-wrapper-day{
+    background: lime;
+}
+
+.partner-logo{
+    height: 100px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.ellipse-overview-section{
+    background: url('/assets/upload/image/textbox.png');
+    width: 85%;
+    min-height: 168px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.w-vw{
+    width: 100vw;
+}
+
+.header-style{
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    transform: translate(-50%,50%);
+    color: white;
+}
+
+.custom-border{
+    border-bottom: 10px solid black;
+}
