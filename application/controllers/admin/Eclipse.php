@@ -40,23 +40,29 @@ class Eclipse extends CI_Controller {
 	}
 	
 	// Edit
-	public function edit($id) {
+	public function edit($id)
+	{
 		$eclipse		= $this->eclipse_model->detail($id);
-		
-		// Proses ke database
-		$i = $this->input;
-		$data = array(	'id'			=> $id,							
-						'title'		=> $i->post('title'),
-						'konten'		=> $i->post('konten')	);
-		$this->eclipse_model->edit($data);
-		$this->session->set_flashdata('sukses','Produk telah diedit');
-		redirect(base_url('admin/eclipse'));
-
 		// End masuk database
-		$data = array(	'title'			=> 'Edit Data',
-						'eclipse'	=> $eclipse,
-						'isi'			=> 'admin/eclipse/edit'); 
-		$this->load->view('admin/layout/wrapper', $data);
+		$data = array(
+			'title'				=> 'Edit Data',
+			'eclipse'			=> $eclipse,
+			'isi'				=> 'admin/eclipse/edit'
+		);
+		return $this->load->view('admin/layout/wrapper', $data);
+	}
+
+	public function update($id)
+	{
+		$i = $this->input;
+		$data = array(
+			'id'			=> (int)$id,
+			'konten'		=> $i->post('konten'),
+			'title'			=> $i->post('title')
+		);
+		$this->eclipse_model->edit($data);
+		$this->session->set_flashdata('sukses', 'Data telah diedit');
+		redirect(base_url('admin/eclipse'));
 	}
 
 	// Delete

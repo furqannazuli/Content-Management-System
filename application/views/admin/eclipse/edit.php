@@ -38,19 +38,15 @@ if(isset($error)){
 echo validation_errors('<div class="alert alert-success">','</div>');
 
 // Form
-echo form_open_multipart('admin/eclipse/edit/'.$eclipse->id);
+echo form_open_multipart('admin/eclipse/update/'.$eclipse['id']);
 ?>
 
 <div class="col-md-12">
-    <div class="form-group form-group-lg">
-        <label>Judul Bab</label>
-        <input type="text" name="judul_bab" placeholder="Judul Bab" value="<?php echo $eclipse->judul_bab ?>" required class="form-control">
-    </div>
-</div>
-<div class="col-md-12">
     <div class="form-group">
+        <label for="title">Judul</label>
+        <input name="title" class="form-control" placeholder="Judul" id="title" value="<?php echo $eclipse['title'] ?>">
         <label>Konten</label>
-        <textarea name="konten" class="form-control" placeholder="Konten" id="konten"><?php echo $eclipse->konten ?></textarea>
+        <textarea name="konten" class="form-control" placeholder="Konten" id="konten"><?php echo $eclipse['konten'] ?></textarea>
     </div>
 </div>
 <div class="col-md-6">
